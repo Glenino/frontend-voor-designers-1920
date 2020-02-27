@@ -19,6 +19,7 @@ body {
     background: #fff;
     border-radius: 1em;
     box-shadow: 0.5em 0.5em 0.5em rgba(68, 68, 68, 0.6);
+    margin-top: 1em;
 }
 
 img {
@@ -55,32 +56,42 @@ p {
 
 article {
     display: inline-block;
-    margin: 0.1em;
+    border: 0.05em solid;
+    background-color: white;
+    margin: 0.05em
 }
 
-.intro{
-    font-size: 1em;
-    font-family:cursive;
+article:hover {
+    border-color: azure;
 }
 
-h2{
+.intro {
+    font-size: 1.3em;
     font-family: cursive;
 }
 
-h1{
-      text-shadow: 1px 1px 1px red,
-         2px 2px 1px orange,
-         3px 3px 1px yellow,
-         4px 4px 1px green,
-         5px 5px 1px lightblue,
-         6px 6px 1px purple,
-         7px 7px 1px pink,
-         8px 8px 1px red,
-         9px 9px 1px orange,
-         10px 10px 1px yellow,
-         11px 11px 1px green,
-         12px 12px 1px lightblue,
-         13px 13px 1px purple,
-         14px 14px 1px pink;
+h2 {
+    font-family: cursive;
 }
 
+h1 {
+    text-shadow: 1px 1px 1px red,
+        2px 2px 1px orange,
+        3px 3px 1px yellow,
+        4px 4px 1px green,
+        5px 5px 1px lightblue,
+        6px 6px 1px purple,
+        7px 7px 1px pink;
+    text-align: center;
+}
+
+button {
+    font-family: fantasy;
+    background-color: gold;
+    margin: 1.48em;
+    padding: 1em;
+    border: 0.2em solid black;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
