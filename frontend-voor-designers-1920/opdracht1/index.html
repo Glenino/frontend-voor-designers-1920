@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inazuma dragspel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Inazuma Micro Interactie</h1>
+
+        <p class="intro">Hoe goed ken jij de spelers van Inazuma Eleven? Zet de spelers op de juiste positie door op ze te klikken en in het goede vakje te plaatsen.</p>
+        <div class="img">
+
+            <article class="axel" draggable="true">
+                <img draggable="false" src="img/axel.png" alt="axel">
+                <p draggable="false">Axel Blaze</p>
+            </article>
+
+            <article class="byran" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                <img draggable="false" src="img/byron%20l.png" alt="byron">
+                <p draggable="false">Byran Love</p>
+            </article>
+
+            <article class="jude" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                <img draggable="false" src="img/jude.jpg" alt="jude">
+                <p draggable="false">Jude Sharp</p>
+            </article>
+
+            <article class="mark" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                <img draggable="false" src="img/mark.png" alt="mark">
+                <p draggable="false">Mark Evans</p>
+            </article>
+
+            <article class="tori" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                <img draggable="false" src="img/tori.png" alt="tori">
+                <p draggable="false">Tori Vanguard</p>
+            </article>
+
+            <article class="darren" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                <img draggable="false" src="img/darren.jpg" alt="tori">
+                <p draggable="false">Darren L.</p>
+            </article>
+
+            <article class="shawn" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                <img draggable="false" src="img/shawn.png" alt="shawn">
+                <p draggable="false">Shawn Frost</p>
+            </article>
+
+            <article class="jack" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                <img draggable="false" src="img/jack.png" alt="jack">
+                <p draggable="false">Jack Wallside</p>
+            </article>
+        </div>
+
+        <div class="grid">
+            <div id="aanvaller" class="dropzone">
+                <h2>Aanvaller</h2>
+            </div>
+
+            <div id="middenvelder" class="dropzone">
+                <h2>Middenvelder</h2>
+            </div>
+
+            <div id="verdediger" class="dropzone">
+                <h2>Verdediger</h2>
+            </div>
+
+            <div id="keeper" class="dropzone">
+                <h2>Keeper</h2>
+            </div>
+        </div>
+        
+        <button>De spelers staan nu goed</button>
+
+    </main>
+
+    <script src="js/script.js" type="text/javascript"></script>
+
+</body>
+
+</html>
