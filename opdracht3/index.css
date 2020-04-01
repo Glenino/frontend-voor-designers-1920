@@ -1,0 +1,214 @@
+/* || general styles */
+
+img {
+    width: 7.5em;
+    height: 12.5em;
+    background-color: white;
+    border: 1em solid;
+    border-color: white;
+    margin-left: 40em;
+    margin-top: 2em;
+}
+
+
+html {
+    background: url("img/Blue-movie-film-strip-backgrounds.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    display: grid;
+}
+
+section p {
+    color: white;
+    width: 25em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-shadow: 1px 1px 1px red,
+        2px 2px 1px orange,
+        3px 3px 1px yellow,
+        4px 4px 1px green,
+        5px 5px 1px lightblue,
+        6px 6px 1px purple,
+        7px 7px 1px pink;
+    text-align: center;
+    background-size: 2em;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    border-color: greenyellow;
+}
+
+div {
+    width: 25em;
+    background: url("img/star.jpg");
+    margin-right: auto;
+    border: 0.1em solid;
+    border-color: yellow;
+    height: 5em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+div:hover {
+    border-color: greenyellow;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 0.5em;
+    border: 0.3em;
+}
+
+.pijlr {
+    width: 4.5em;
+    height: 4.5em;
+    border: 0em;
+    margin-right: 15em;
+}
+
+.pijll {
+    width: 4.5em;
+    height: 4.5em;
+    border: 0em;
+    margin-left: 15em;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pijll:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.pijlr:hover {
+    border-color: greenyellow;
+    transform: scale(1.2, 1.2);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.mini{
+    width: 5em;
+    height: 8.3em;
+    background-color: white;
+    border: 0.3em solid;
+    border-color: white;
+}
+
+---------------------------------------- html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+
+/* header styles */
+
+
+header p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* section styles */
+
+section article {
+    width: 33%;
+    float: left;
+}
+
+section ul {
+    margin-top: 0;
+}
+
+.super {
+    display: flex;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.super > .party {
+    padding-top: 3em;
+    padding-right: 1em;
+    padding-left: 1em;
+    background: red;
+    text-align: center;
+    border: 0.2em solid black;
+    margin-right: 20em;
+    margin-left: 35em;
+    margin-top: 5em;
+    width: 20em;
+}
+
+.super > .party:hover {
+    border-color: greenyellow;
+    transform: scale(1.2, 1.2);
+}
+
+.super > .party > h4,
+.super > .party > p {
+    color: white;
+    width: 15em;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.party img {
+    width: 6em;
+    height: 6em;
+}
+
+.superm {
+    /*    margin-left: -3000px;*/
+    transition: margin-left 1s;
+}
+
+.mario {
+    margin-left: 0em;
+}
+
+.luigi {
+    margin-left: -70em;
+}
+
+.peach {
+    margin-left: -140em;
+}
+
+.daisy {
+    margin-left: -210em;
+}
+
+.wario {
+    margin-left: -280em;
+}
+
+.waluigi {
+    margin-left: -350em;
+}
+
+.yoshi {
+    margin-left: -420em;
+}
+
+.rosalina {
+    margin-left: -490em;
+}

@@ -104,15 +104,37 @@ function links() {
     console.log(currentimg);
 
     if (currentimg < 1) {
-        currentimg = 8;    
+        currentimg = 8;
     }
-    
+
     beweeg2();
 } //end function links()
 
 pijl1.addEventListener("click", links);
 pijl2.addEventListener("click", rechts);
 
-pijl1.addEventListener("keydown", links);
-pijl2.addEventListener("keydown", rechts);
+function pijlen(event) {
+    if (event.keyCode == 37) {
+         currentimg = currentimg - 1;
+    console.log(currentimg);
 
+    if (currentimg < 1) {
+        currentimg = 8;
+    }
+
+    beweeg2();
+    } 
+    else if (event.keyCode == 39) {
+        currentimg = currentimg + 1;
+    console.log(currentimg);
+
+    if (currentimg > 8) {
+        currentimg = 1;
+    }
+
+    beweeg();
+    }
+}
+
+pijl1.addEventListener("keydown", pijlen);
+pijl2.addEventListener("keydown", pijlen);
