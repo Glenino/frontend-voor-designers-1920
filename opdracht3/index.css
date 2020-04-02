@@ -6,19 +6,17 @@ img {
     background-color: white;
     border: 1em solid;
     border-color: white;
-    margin-left: 40em;
-    margin-top: 2em;
+    margin-top: 3em;
+    margin-left: 5em;
 }
-
 
 html {
     background: url("img/Blue-movie-film-strip-backgrounds.jpg");
     background-size: 100vw;
     background-repeat: no-repeat;
-    display: grid;
 }
 
-section p {
+ p {
     color: white;
     width: 25em;
     text-align: center;
@@ -53,9 +51,20 @@ div {
     margin-right: auto;
     border: 0.1em solid;
     border-color: yellow;
-    height: 5em;
     margin-bottom: 2em;
     margin-top: 2em;
+    padding: 0.1em;
+    display: flex;
+}
+
+div > img{
+       width: 2.5em;
+    height: 4.5em;
+    background-color: white;
+    border: 0.3em solid;
+    border-color: white;
+    margin-top: 2em;
+    margin-left: 0.5em;
 }
 
 div:hover {
@@ -65,7 +74,8 @@ div:hover {
 h2 {
     font-size: 1.5rem;
     color: black;
-    margin-left: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
     border: 0.3em;
 }
 
@@ -74,6 +84,7 @@ h2 {
     height: 4.5em;
     border: 0em;
     margin-right: 15em;
+    margin-top: 2em;
 }
 
 .pijll {
@@ -81,6 +92,7 @@ h2 {
     height: 4.5em;
     border: 0em;
     margin-left: 15em;
+    margin-top: 2em;
 }
 
 nav {
@@ -109,8 +121,45 @@ body {
     border: 0.3em solid;
     border-color: white;
 }
+----------------------------------------
+.superm {
+    /*    margin-left: -3000px;*/
+    transition: margin-left 1s;
+}
 
----------------------------------------- html {
+.mario {
+    margin-left: 0em;
+}
+
+.luigi {
+    margin-left: -70em;
+}
+
+.peach {
+    margin-left: -140em;
+}
+
+.daisy {
+    margin-left: -210em;
+}
+
+.wario {
+    margin-left: -280em;
+}
+
+.waluigi {
+    margin-left: -350em;
+}
+
+.yoshi {
+    margin-left: -420em;
+}
+
+.rosalina {
+    margin-left: -490em;
+}
+----------------------------------------
+html {
     font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 

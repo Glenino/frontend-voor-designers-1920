@@ -24,61 +24,6 @@ request.onload = function () {
     }
 }
 
-//  populateHeader(superHeroes);
-//  showHeroes(superHeroes);
-// hier wacht je op het antwoord van de server
-
-//function populateHeader(jsonObj) {
-//  var myH1 = document.createElement('h1');
-//  myH1.textContent = jsonObj['id'];
-//  header.appendChild(myH1);
-//
-//  var myPara = document.createElement('p');
-//  myPara.textContent = 'Title: ' + jsonObj['title'] + ' // Release_date: ' + jsonObj['release_date'];
-//  header.appendChild(myPara);
-//} //door deze functie kunnen we de JSON-gegevens gebruiken
-//
-//function showHeroes(jsonObj) {
-//  var heroes = jsonObj['reviews'];
-//      
-//  for (var i = 0; i < heroes.length; i++) {
-//    var myArticle = document.createElement('article');
-//    var myH2 = document.createElement('h2');
-//    var myPara1 = document.createElement('p');
-//    var myPara2 = document.createElement('p');
-//    var myPara3 = document.createElement('p');
-//    var myList = document.createElement('ul');
-//
-//    myH2.textContent = heroes[i].name;
-//    myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-//    myPara2.textContent = 'Age: ' + heroes[i].age;
-//    myPara3.textContent = 'Superpowers:';
-//        
-//    var superPowers = heroes[i].powers;
-//    for (var j = 0; j < superPowers.length; j++) {
-//      var listItem = document.createElement('li');
-//      listItem.textContent = superPowers[j];
-//      myList.appendChild(listItem);
-//    }
-//
-//    myArticle.appendChild(myH2);
-//    myArticle.appendChild(myPara1);
-//    myArticle.appendChild(myPara2);
-//    myArticle.appendChild(myPara3);
-//    myArticle.appendChild(myList);
-//
-//    section.appendChild(myArticle);
-//  }
-//}
-//
-//console.log()//maakt de informatiekaarten aan
-
-/*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
-
-/*eslint-env browser*/
-
-/*eslint 'no-console': 0*/
-
 var dragged;
 
 /* events fired on the draggable target */
@@ -130,5 +75,141 @@ document.addEventListener("drop", function (event) {
         event.target.appendChild(dragged);
     }
 }, false);
-                
-                          //bron: https://developer.mozilla.org/nl/docs/Web/API/Document/drag_event//
+
+//bron: https://developer.mozilla.org/nl/docs/Web/API/Document/drag_event//
+
+var pijl1 = document.querySelector(".pijll");
+//console.log(pijl1)
+var pijl2 = document.querySelector(".pijlr");
+//console.log(pijl2)
+var sup = document.querySelector(".superm");
+var currentimg = 1;
+
+//geholpen door: Ender Akkanat en Koop Reynders
+function beweeg() {
+
+    if (currentimg == 1) {
+        sup.classList.remove("rosalina");
+        sup.classList.add("mario");
+    }
+
+    if (currentimg == 2) {
+        sup.classList.remove("mario");
+        sup.classList.add("luigi");
+    }
+    if (currentimg == 3) {
+        sup.classList.remove("luigi");
+        sup.classList.add("peach");
+    }
+    if (currentimg == 4) {
+        sup.classList.remove("peach");
+        sup.classList.add("daisy");
+    }
+    if (currentimg == 5) {
+        sup.classList.remove("daisy");
+        sup.classList.add("wario");
+    }
+    if (currentimg == 6) {
+        sup.classList.remove("wario");
+        sup.classList.add("waluigi");
+    }
+    if (currentimg == 7) {
+        sup.classList.remove("waluigi");
+        sup.classList.add("yoshi");
+    }
+    if (currentimg == 8) {
+        sup.classList.remove("yoshi");
+        sup.classList.add("rosalina");
+    }
+
+} //end function beweeg
+
+function beweeg2() {
+
+    if (currentimg == 8) {
+        sup.classList.remove("mario");
+        sup.classList.add("rosalina");
+    }
+
+    if (currentimg == 1) {
+        sup.classList.remove("luigi");
+        sup.classList.add("mario");
+    }
+    if (currentimg == 2) {
+        sup.classList.remove("peach");
+        sup.classList.add("luigi");
+    }
+    if (currentimg == 3) {
+        sup.classList.remove("daisy");
+        sup.classList.add("peach");
+    }
+    if (currentimg == 4) {
+        sup.classList.remove("wario");
+        sup.classList.add("daisy");
+    }
+    if (currentimg == 5) {
+        sup.classList.remove("waluigi");
+        sup.classList.add("wario");
+    }
+    if (currentimg == 6) {
+        sup.classList.remove("yoshi");
+        sup.classList.add("waluigi");
+    }
+    if (currentimg == 7) {
+        sup.classList.remove("rosalina");
+        sup.classList.add("yoshi");
+    }
+
+} //end function beweeg
+
+function rechts() {
+    currentimg = currentimg + 1;
+    console.log(currentimg);
+
+    if (currentimg > 8) {
+        currentimg = 1;
+    }
+
+    beweeg();
+}
+
+function links() {
+    currentimg = currentimg - 1;
+    console.log(currentimg);
+
+    if (currentimg < 1) {
+        currentimg = 8;
+    }
+
+    beweeg2();
+} //end function links()
+
+pijl1.addEventListener("click", links);
+pijl2.addEventListener("click", rechts);
+
+function pijlen(event) {
+    if (event.keyCode == 37) {
+         currentimg = currentimg - 1;
+    console.log(currentimg);
+
+    if (currentimg < 1) {
+        currentimg = 8;
+    }
+
+    beweeg2();
+    } 
+    else if (event.keyCode == 39) {
+        currentimg = currentimg + 1;
+    console.log(currentimg);
+
+    if (currentimg > 8) {
+        currentimg = 1;
+    }
+
+    beweeg();
+    }
+}
+
+pijl1.addEventListener("keydown", pijlen);
+pijl2.addEventListener("keydown", pijlen);
+
