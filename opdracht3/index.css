@@ -55,7 +55,6 @@ img:hover {
     margin-bottom: 2em;
     margin-top: 2em;
     padding: 0.1em;
-    display: flex;
 }
 
 div > img {
@@ -64,7 +63,7 @@ div > img {
     background-color: white;
     border: 0.3em solid;
     border-color: white;
-    margin-top: 4em;
+    margin-top: 0.9em;
     margin-left: 0.5em;
 }
 
@@ -75,7 +74,7 @@ div:hover {
 h2 {
     font-size: 1.5rem;
     color: black;
-    margin-left: auto;
+    margin-left: 5em;
     margin-right: auto;
     border: 0.3em;
 }
@@ -130,7 +129,7 @@ section {
 }
 
 section > img {
-    margin-left: 180px;
+    margin-left: 635px;
 }
 
 p{
@@ -146,12 +145,6 @@ p{
 .js.yay{
     opacity: 1;
 }
-
-container{
-    display: flex;
-    flex-direction: row;
-    width: 120%;
-}
 ---------------------------------------- .superm {
     /*    margin-left: -3000px;*/
     transition: margin-left 1s;
@@ -162,31 +155,24 @@ container{
 }
 
 .luigi {
-    margin-left: -70em;
+    margin-left: -50em;
 }
 
 .peach {
-    margin-left: -140em;
+    margin-left: -99em;
 }
 
 .daisy {
-    margin-left: -210em;
+    margin-left: -148.3em;
 }
 
 .wario {
-    margin-left: -280em;
+    margin-left: -197.5em;
 }
 
 .waluigi {
-    margin-left: -350em;
+    margin-left: -246.6em;
 }
 
-.yoshi {
-    margin-left: -420em;
-}
-
-.rosalina {
-    margin-left: -490em;
-}
 
 ---------------------------------------- 
