@@ -16,12 +16,13 @@ html {
     background-repeat: no-repeat;
 }
 
- p {
+p {
     color: white;
     width: 25em;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    position: sticky;
 }
 
 h1 {
@@ -45,7 +46,7 @@ img:hover {
     border-color: greenyellow;
 }
 
-div {
+.dropzone {
     width: 25em;
     background: url("img/star.jpg");
     margin-right: auto;
@@ -57,13 +58,13 @@ div {
     display: flex;
 }
 
-div > img{
-       width: 2.5em;
+div > img {
+    width: 2.5em;
     height: 4.5em;
     background-color: white;
     border: 0.3em solid;
     border-color: white;
-    margin-top: 2em;
+    margin-top: 4em;
     margin-left: 0.5em;
 }
 
@@ -80,16 +81,16 @@ h2 {
 }
 
 .pijlr {
-    width: 4.5em;
-    height: 4.5em;
+    width: 3.5em;
+    height: 3.5em;
     border: 0em;
     margin-right: 15em;
     margin-top: 2em;
 }
 
 .pijll {
-    width: 4.5em;
-    height: 4.5em;
+    width: 3.5em;
+    height: 3.5em;
     border: 0em;
     margin-left: 15em;
     margin-top: 2em;
@@ -114,118 +115,44 @@ body {
     overflow-x: hidden;
 }
 
-.mini{
+.mini {
     width: 5em;
     height: 8.3em;
     background-color: white;
     border: 0.3em solid;
     border-color: white;
 }
-----------------------------------------
-.superm {
-    /*    margin-left: -3000px;*/
-    transition: margin-left 1s;
-}
 
-.mario {
-    margin-left: 0em;
-}
-
-.luigi {
-    margin-left: -70em;
-}
-
-.peach {
-    margin-left: -140em;
-}
-
-.daisy {
-    margin-left: -210em;
-}
-
-.wario {
-    margin-left: -280em;
-}
-
-.waluigi {
-    margin-left: -350em;
-}
-
-.yoshi {
-    margin-left: -420em;
-}
-
-.rosalina {
-    margin-left: -490em;
-}
-----------------------------------------
-html {
-    font-family: 'helvetica neue', helvetica, arial, sans-serif;
-}
-
-
-/* header styles */
-
-
-header p {
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* section styles */
-
-section article {
-    width: 33%;
-    float: left;
-}
-
-section ul {
-    margin-top: 0;
-}
-
-.super {
+section {
     display: flex;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+    flex-direction: row;
+    width: 120%;
 }
 
-.super > .party {
-    padding-top: 3em;
-    padding-right: 1em;
-    padding-left: 1em;
-    background: red;
-    text-align: center;
-    border: 0.2em solid black;
-    margin-right: 20em;
-    margin-left: 35em;
-    margin-top: 5em;
-    width: 20em;
+section > img {
+    margin-left: 180px;
 }
 
-.super > .party:hover {
-    border-color: greenyellow;
-    transform: scale(1.2, 1.2);
+p{
+    opacity: 0;
+    transition: 5s;
 }
 
-.super > .party > h4,
-.super > .party > p {
-    color: white;
-    width: 15em;
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+.normal {
+    opacity: 1;
+    transition: 0s;
 }
 
-
-.party img {
-    width: 6em;
-    height: 6em;
+.js.yay{
+    opacity: 1;
 }
 
-.superm {
+container{
+    display: flex;
+    flex-direction: row;
+    width: 120%;
+}
+---------------------------------------- .superm {
     /*    margin-left: -3000px;*/
     transition: margin-left 1s;
 }
@@ -261,3 +188,5 @@ section ul {
 .rosalina {
     margin-left: -490em;
 }
+
+---------------------------------------- 
