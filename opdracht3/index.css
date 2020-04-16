@@ -20,15 +20,12 @@ img {
     margin-left: 5em;
 }
 
-p {
+.normal {
     color: white;
     width: 25em;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    opacity: 1;
-    background-color: none;
-    padding: 0em;
 }
 
 h1 {
@@ -38,7 +35,8 @@ h1 {
         4px 4px 1px green,
         5px 5px 1px lightblue,
         6px 6px 1px purple,
-        7px 7px 1px pink; /*Bron: https://glenino.github.io/Frontend-D/index.html (Frontend Development opdracht)*/
+        7px 7px 1px pink;
+    /*Bron: https://glenino.github.io/Frontend-D/index.html (Frontend Development opdracht)*/
     text-align: center;
     background-size: 2em;
     color: white;
@@ -53,18 +51,44 @@ img:hover {
     transform: scale(1.1, 1.1);
 }
 
+/*stijl voor loading scherm*/
 
+#loader { /*bron: https:https://www.youtube.com/watch?v=b9zyKCsUJfY*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: visible;
+    background: #005E8C url("img/starswirl.gif") no-repeat center center;
+    margin-top: -2em;
+    margin-left: -0.5em;
+}
+
+.loadingtitel{
+    font-size: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loadingtekst{
+    margin-top: 27.5em;
+    font-size: 1.3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /*stijl voor de favorietenvak*/
 .dropzone {
     width: 25em;
-    background: url("img/star.jpg"); /*Bron: https://www.google.nl/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F93806-yellow-stars-background-vector&psig=AOvVaw2vjehfiJHCmz695qvNf6Bk&ust=1587145748101000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiw9-XA7egCFQAAAAAdAAAAABAJ*/
+    background: url("img/star.jpg");
+    /*Bron: https://www.google.nl/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F93806-yellow-stars-background-vector&psig=AOvVaw2vjehfiJHCmz695qvNf6Bk&ust=1587145748101000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiw9-XA7egCFQAAAAAdAAAAABAJ*/
     margin-right: auto;
     border: 0.1em solid;
     border-color: yellow;
     margin-bottom: 2em;
     margin-top: 2em;
     padding: 0.1em;
+    margin-left: 1em;
 }
 
 h2 {
@@ -73,6 +97,14 @@ h2 {
     margin-left: 5em;
     margin-right: auto;
     border: 0.3em;
+}
+
+p {
+    color: white;
+    width: 25em;
+    margin-right: auto;
+    margin-left: 1em;
+    margin-top: -1.8em;
 }
 
 /*zorgt ervoor dat de stijling van de afbeeldingen veranderen, als ze in de dropzone komen */
@@ -97,7 +129,7 @@ div:hover {
     height: 3.5em;
     border: 0em;
     margin-right: 15em;
-    margin-top: 2em;
+    margin-top: 1.8em;
 }
 
 .pijll {
@@ -105,14 +137,16 @@ div:hover {
     height: 3.5em;
     border: 0em;
     margin-left: 15em;
-    margin-top: 2em;
+    margin-top: 1.8em;
 }
 
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}  /*Bron: Koop Reynders)*/
+}
+
+/*Bron: Koop Reynders)*/
 
 .pijll:hover {
     transform: scale(1.2, 1.2);
@@ -129,7 +163,9 @@ section {
     display: flex;
     flex-direction: row;
     width: 120%;
-} /*Bron: Vincent Kempers en May)*/
+}
+
+/*Bron: Vincent Kempers en May Johansson*/
 
 section > img {
     margin-left: 635px;

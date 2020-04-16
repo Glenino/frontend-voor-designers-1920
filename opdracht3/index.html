@@ -12,32 +12,40 @@
 
 <body>
 
-    <div class="dropzone">
-        <!--Geeft aan dat hier de afbeelding hierin gesleept kunnen worden-->
-        <h2>Mijn favorieten</h2>
+    <div id="loader"><h1 class="loadingtitel">MovieRoulette</h1>
+    <p class="loadingtekst"><b>laden....</b></p></div>
+
+    <div id="content">
+
+        <div class="dropzone">
+            <!--Geeft aan dat hier de afbeelding hierin gesleept kunnen worden-->
+            <h2>Mijn favorieten</h2>
+        </div>
+        <p>Sleep jouw favoriete film naar het vak hierboven</p>
+
+        <h1>MovieRoulette</h1>
+        <p class="normal">Hieronder heb ik zes films in een caroussel gezet die je kunt gaan bekijken. <b>Klik op de knoppen of op de links of rechts toets op je toetsenbord</b> om de carrousel te laten besturen. Als je een film leuk vind, <b>klik</b> je op die film en <b>sleep</b> je hem naar het favorietenvlak bovenin. <b>Klik op de film</b> om informatie te bekijken.</p>
+
+        <!--Door zes verschillende sections te doen, kan ik per film straks een section geven waar ze in moeten-->
+        <section id="filmcovers" class="superm">
+        </section>
+        <section id="filmcovers2" class="superm">
+        </section>
+        <section id="filmcovers3" class="superm">
+        </section>
+        <section id="filmcovers4" class="superm">
+        </section>
+        <section id="filmcovers5" class="superm">
+        </section>
+        <section id="filmcovers6" class="superm">
+        </section>
+
+        <nav>
+            <img class="pijll" src="img/linkspijl.png">
+            <img class="pijlr" src="img/Pijlrechts.png">
+        </nav>
+
     </div>
-
-    <h1>MovieRoulette</h1>
-    <p>Hieronder heb ik zes films in een caroussel gezet die je kunt gaan bekijken. Klik op de knoppen of op de links of rechts toets op je toetsenbord om de carrousel te laten besturen. Als je een film leuk vind, klik je op die film en sleep je hem naar het favorietenvlak bovenin. Klik op de film om informatie te bekijken.</p>
-
-    <!--Door zes verschillende sections te doen, kan ik per film straks een section geven waar ze in moeten-->
-    <section id="filmcovers" class="superm">
-    </section>
-    <section id="filmcovers2" class="superm">
-    </section>
-    <section id="filmcovers3" class="superm">
-    </section>
-    <section id="filmcovers4" class="superm">
-    </section>
-    <section id="filmcovers5" class="superm">
-    </section>
-    <section id="filmcovers6" class="superm">
-    </section>
-
-    <nav>
-        <img class="pijll" src="img/linkspijl.png">
-        <img class="pijlr" src="img/Pijlrechts.png">
-    </nav>
 
     <script src="index.js">
     </script>

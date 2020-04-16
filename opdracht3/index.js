@@ -4,6 +4,30 @@
 
 /*eslint 'no-console': 0*/
 
+//bron: https:https://www.youtube.com/watch?v=b9zyKCsUJfY
+var loader;
+
+function loadNow(opacity) {
+    if (opacity <= 0) {
+        displayContent();
+    } else {
+        loader.style.opacity = opacity;
+        window.setTimeout(function () {
+            loadNow(opacity - 0.05)
+        }, 100);
+    }
+}
+
+function displayContent() {
+    loader.style.display = "none";
+    document.getElementById("content").style.display = "block";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    loader = document.getElementById("loader");
+    loadNow(2);
+});
+
 var requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //roept de URL op van de JSON
 var request = new XMLHttpRequest(); //stuurt een verzoek om te vragen voor de informatie
 request.open('GET', requestURL); //opent de aanvraag naar informatie
@@ -178,6 +202,7 @@ pijl2.addEventListener("click", rechts);
 
 
 document.addEventListener("keydown", function () { //zorgt ervoor dat de er iets gebeurd, wanneer je een toets indrukt op je toetsenbord 
+    /*Bron: Ids Fijen*/
     function rechts() {
         currentimg = currentimg + 1;
         console.log(currentimg);
