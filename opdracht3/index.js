@@ -14,37 +14,20 @@ request.open('GET', requestURL); //opent de aanvraag naar informatie
 request.responseType = 'json'; //geeft aan dat de JSON veranderd moet worden naar een Javascript-object
 request.send(); //je verzend het verzoek naar de server
 
+
 request.onload = function () {
     var movies = request.response;
     var i;
 
-    for (let i = 0; i < movies.length; i++) {
+            for (let i = 0; i < movies.length; i++) {
         console.log(movies[i]); //laat de eerste array zien van movies
         var newImage = document.createElement("img"); //geeft aan dat je een image gaat gebruiken
         newImage.setAttribute("src", movies[i].cover); //zoekt de bron bij cover bij de eerste in de array
 
         var carrousel = document.querySelector("#filmcovers")
         carrousel.appendChild(newImage); //zet de image in de section id
-
-        if (newImage == "dragzone" == true) {
-            console.log("Er is een nieuwe film toegevoegd in uw Favorieten.")
-        }
     }
-}
-
-function favo() {
-
-    var i;
-
-    console.log("hoi")
-
-    for (let i = 0; i < movies.length; i++) {
-        if (newImage == "dragzone" == true) {
-            console.log("Er is een nieuwe film toegevoegd in uw Favorieten.")
-        }
     }
-}
-
 
 
 var dragged;
@@ -238,9 +221,9 @@ document.addEventListener("keydown", function () {
 
         beweeg2();
     } //end function links()
-    if (event.keyCode == 39) {
+    if (event.keyCode == 37) {
         links();
-    } else if (event.keyCode == 37) {
+    } else if (event.keyCode == 39) {
         rechts();
     }
 });

@@ -16,13 +16,12 @@ html {
     background-repeat: no-repeat;
 }
 
-p {
+.normal {
     color: white;
     width: 25em;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    position: sticky;
 }
 
 h1 {
@@ -44,6 +43,7 @@ h1 {
 
 img:hover {
     border-color: greenyellow;
+    transform: scale(1.1, 1.1);
 }
 
 .dropzone {
@@ -132,20 +132,11 @@ section > img {
     margin-left: 635px;
 }
 
-p{
-    opacity: 0;
-    transition: 5s;
-}
-
-.normal {
-    opacity: 1;
-    transition: 0s;
-}
-
 .js.yay{
     opacity: 1;
 }
----------------------------------------- .superm {
+
+.superm {
     /*    margin-left: -3000px;*/
     transition: margin-left 1s;
 }
@@ -173,6 +164,3 @@ p{
 .waluigi {
     margin-left: -246.6em;
 }
-
-
----------------------------------------- 
