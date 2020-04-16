@@ -26,6 +26,19 @@ request.onload = function () {
 
         var carrousel = document.querySelector("#filmcovers")
         carrousel.appendChild(newImage); //zet de image in de section id
+
+        var newTitle = document.createElement("p"); //geeft aan dat je een image gaat gebruiken
+        newTitle.setAttribute("src", movies[i].title); //zoekt de bron bij cover bij de eerste in de array
+
+        carrousel.appendChild(newTitle); //zet de image in de section id
+
+        newImage.addEventListener("mouseover", function (event) {
+
+            var newTitle = document.createElement("p"); //geeft aan dat je een image gaat gebruiken
+            newTitle.setAttribute("src", movies[i].title); //zoekt de bron bij cover bij de eerste in de array
+            
+            newTitle.classListener.toggle("yay")
+        })
     }
 }
 

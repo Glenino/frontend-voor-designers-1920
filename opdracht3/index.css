@@ -22,9 +22,18 @@ html {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-        opacity: 1;
-    background-color:none;
+    opacity: 1;
+    background-color: none;
+}
 
+.yay{
+    color: black;
+    padding: 2em;
+    opacity: 1
+}
+
+p {
+    opacity: 0;
 }
 
 h1 {
