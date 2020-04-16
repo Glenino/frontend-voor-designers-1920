@@ -22,6 +22,9 @@ html {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+        opacity: 1;
+    background-color:none;
+
 }
 
 h1 {
@@ -130,10 +133,6 @@ section {
 
 section > img {
     margin-left: 635px;
-}
-
-.js.yay{
-    opacity: 1;
 }
 
 .superm {

@@ -19,7 +19,7 @@ request.onload = function () {
     var movies = request.response;
     var i;
 
-            for (let i = 0; i < movies.length; i++) {
+    for (let i = 0; i < movies.length; i++) {
         console.log(movies[i]); //laat de eerste array zien van movies
         var newImage = document.createElement("img"); //geeft aan dat je een image gaat gebruiken
         newImage.setAttribute("src", movies[i].cover); //zoekt de bron bij cover bij de eerste in de array
@@ -27,8 +27,7 @@ request.onload = function () {
         var carrousel = document.querySelector("#filmcovers")
         carrousel.appendChild(newImage); //zet de image in de section id
     }
-    }
-
+}
 
 var dragged;
 
