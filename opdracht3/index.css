@@ -1,4 +1,14 @@
-/* || general styles */
+/*algemene stijling*/
+html {
+    background: url("img/Blue-movie-film-strip-backgrounds.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+}
+
+/*zorgt ervoor dat je niet kan scrollen naar links/rechts*/
+body {
+    overflow-x: hidden;
+}
 
 img {
     width: 7.5em;
@@ -10,13 +20,7 @@ img {
     margin-left: 5em;
 }
 
-html {
-    background: url("img/Blue-movie-film-strip-backgrounds.jpg");
-    background-size: 100vw;
-    background-repeat: no-repeat;
-}
-
-.normal {
+p {
     color: white;
     width: 25em;
     text-align: center;
@@ -34,7 +38,7 @@ h1 {
         4px 4px 1px green,
         5px 5px 1px lightblue,
         6px 6px 1px purple,
-        7px 7px 1px pink;
+        7px 7px 1px pink; /*Bron: https://glenino.github.io/Frontend-D/index.html (Frontend Development opdracht)*/
     text-align: center;
     background-size: 2em;
     color: white;
@@ -49,9 +53,12 @@ img:hover {
     transform: scale(1.1, 1.1);
 }
 
+
+
+/*stijl voor de favorietenvak*/
 .dropzone {
     width: 25em;
-    background: url("img/star.jpg");
+    background: url("img/star.jpg"); /*Bron: https://www.google.nl/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F93806-yellow-stars-background-vector&psig=AOvVaw2vjehfiJHCmz695qvNf6Bk&ust=1587145748101000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiw9-XA7egCFQAAAAAdAAAAABAJ*/
     margin-right: auto;
     border: 0.1em solid;
     border-color: yellow;
@@ -60,6 +67,15 @@ img:hover {
     padding: 0.1em;
 }
 
+h2 {
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 5em;
+    margin-right: auto;
+    border: 0.3em;
+}
+
+/*zorgt ervoor dat de stijling van de afbeeldingen veranderen, als ze in de dropzone komen */
 div > img {
     width: 2.5em;
     height: 4.5em;
@@ -74,13 +90,7 @@ div:hover {
     border-color: greenyellow;
 }
 
-h2 {
-    font-size: 1.5rem;
-    color: black;
-    margin-left: 5em;
-    margin-right: auto;
-    border: 0.3em;
-}
+/*classes/stijling voor de pijlknoppen*/
 
 .pijlr {
     width: 3.5em;
@@ -102,7 +112,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+}  /*Bron: Koop Reynders)*/
 
 .pijll:hover {
     transform: scale(1.2, 1.2);
@@ -113,30 +123,20 @@ nav {
     transform: scale(1.2, 1.2);
 }
 
-body {
-    overflow-x: hidden;
-}
-
-.mini {
-    width: 5em;
-    height: 8.3em;
-    background-color: white;
-    border: 0.3em solid;
-    border-color: white;
-}
+/*classes voor de carrousel*/
 
 section {
     display: flex;
     flex-direction: row;
     width: 120%;
-}
+} /*Bron: Vincent Kempers en May)*/
 
 section > img {
     margin-left: 635px;
 }
 
+/*Bron: https://glenino.github.io/frontend-voor-designers-1920/opdracht2 (Frontend voor Designers opdracht 2)*/
 .superm {
-    /*    margin-left: -3000px;*/
     transition: margin-left 1s;
 }
 

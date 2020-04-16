@@ -4,9 +4,6 @@
 
 /*eslint 'no-console': 0*/
 
-//var header = document.querySelector('header');//roept de header aan
-//var section = document.querySelector('section'); //roept de section aan
-
 var requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //roept de URL op van de JSON
 var request = new XMLHttpRequest(); //stuurt een verzoek om te vragen voor de informatie
 request.open('GET', requestURL); //opent de aanvraag naar informatie
@@ -15,7 +12,7 @@ request.responseType = 'json'; //geeft aan dat de JSON veranderd moet worden naa
 request.send(); //je verzend het verzoek naar de server
 
 
-request.onload = function () {
+request.onload = function () { //hulp gekregen van: Sanne 't Hooft
     var movies = request.response;
     var i;
 
@@ -24,10 +21,13 @@ request.onload = function () {
         var newImage = document.createElement("img"); //geeft aan dat je een image gaat gebruiken
         newImage.setAttribute("src", movies[i].cover); //zoekt de bron bij cover bij de eerste in de array
 
-        var carrousel = document.querySelector("#filmcovers")
+        var carrousel = document.querySelector("#filmcovers"); //
         carrousel.appendChild(newImage); //zet de image in de section id
     }
 }
+
+//bron: https://developer.mozilla.org/nl/docs/Web/API/Document/drag_event//
+//bron: https://glenino.github.io/frontend-voor-designers-1920/opdracht1 (Frontend voor Designers opdracht 1)
 
 var dragged;
 
@@ -37,25 +37,25 @@ document.addEventListener("drag", function (event) {
 }, false);
 
 document.addEventListener("dragstart", function (event) {
-    // store a ref. on the dragged elem
+    // zorgt ervoor dat iets sleepbaar wordt
     dragged = event.target;
-    // make it half transparent
+    // maakt het transparant
     event.target.style.opacity = .5;
 }, false);
 
 document.addEventListener("dragend", function (event) {
-    // reset the transparency
+    // verwijderd het transparante
     event.target.style.opacity = "";
 }, false);
 
 /* events fired on the drop targets */
 document.addEventListener("dragover", function (event) {
-    // prevent default to allow drop
+    // zorgt ervoor dat je niet al eerder kan droppen
     event.preventDefault();
 }, false);
 
 document.addEventListener("dragenter", function (event) {
-    // highlight potential drop target when the draggable element enters it
+    // geeft meer duidelijkheid als je in de buurt ben van wanneer je het element kan droppen
     if (event.target.className == "dropzone") {
         event.target.style.background = "green";
     }
@@ -63,7 +63,7 @@ document.addEventListener("dragenter", function (event) {
 }, false);
 
 document.addEventListener("dragleave", function (event) {
-    // reset background of potential drop target when the draggable element leaves it
+    // zorgt ervoor dat de kleurverandering verdwijnt
     if (event.target.className == "dropzone") {
         event.target.style.background = "";
     }
@@ -71,9 +71,9 @@ document.addEventListener("dragleave", function (event) {
 }, false);
 
 document.addEventListener("drop", function (event) {
-    // prevent default action (open as link for some elements)
+    // zorgt ervoor dat je niet ergens anders kan droppen.
     event.preventDefault();
-    // move dragged elem to the selected drop target
+    // zorgt ervoor dat je weet waar je de elementen kunt droppen
     if (event.target.className == "dropzone") {
         event.target.style.background = "";
         dragged.parentNode.removeChild(dragged);
@@ -81,7 +81,7 @@ document.addEventListener("drop", function (event) {
     }
 }, false);
 
-//bron: https://developer.mozilla.org/nl/docs/Web/API/Document/drag_event//
+//bron: https://glenino.github.io/frontend-voor-designers-1920/opdracht2 (Frontend voor Designers opdracht 2)
 
 var pijl1 = document.querySelector(".pijll");
 //console.log(pijl1)
@@ -91,11 +91,11 @@ var sup = document.querySelector(".superm");
 var currentimg = 1;
 
 //geholpen door: Ender Akkanat en Koop Reynders
-function beweeg() {
+//bron: https://developer.mozilla.org/nl/docs/Web/API/Document/drag_event//
+function beweeg() { //zorgt ervoor dat de carrousel naar rechts gaat
 
     if (currentimg == 1) {
-        sup.classList.remove("waluigi");
-        sup.classList.add("mario");
+        sup.classList.remove("waluigi"); //roept classes aan die alleen in de css staan
     }
 
     if (currentimg == 2) {
@@ -121,7 +121,7 @@ function beweeg() {
 
 } //end function beweeg
 
-function beweeg2() {
+function beweeg2() { //zorgt ervoor dat de carrousel naar links gaat
 
     if (currentimg == 6) {
         sup.classList.remove("mario");
@@ -173,37 +173,16 @@ function links() {
     beweeg2();
 } //end function links()
 
-pijl1.addEventListener("click", links);
+pijl1.addEventListener("click", links); //zorgt ervoor dat de functie links (hieronder rechts) worden geactieveerd, als je op pijl1/pijl2 klikt.
 pijl2.addEventListener("click", rechts);
 
-function pijlen(event) {
-    if (event.keyCode == 37) {
-        currentimg = currentimg - 1;
-        console.log(currentimg);
 
-        if (currentimg < 1) {
-            currentimg = 6;
-        }
-
-        beweeg2();
-    } else if (event.keyCode == 39) {
-        currentimg = currentimg + 1;
-        console.log(currentimg);
-
-        if (currentimg > 6) {
-            currentimg = 1;
-        }
-
-        beweeg();
-    }
-}
-
-document.addEventListener("keydown", function () {
+document.addEventListener("keydown", function () { //zorgt ervoor dat de er iets gebeurd, wanneer je een toets indrukt op je toetsenbord 
     function rechts() {
         currentimg = currentimg + 1;
         console.log(currentimg);
 
-        if (currentimg > 6) {
+        if (currentimg > 6) { //zorgt ervoor wanneer je bij de laatste film bent en je naar links drukt, je naar de eerste film gaat
             currentimg = 1;
         }
 
@@ -214,15 +193,15 @@ document.addEventListener("keydown", function () {
         currentimg = currentimg - 1;
         console.log(currentimg);
 
-        if (currentimg < 1) {
+        if (currentimg < 1) { //zorgt ervoor wanneer je bij de eerste film bent en je naar links drukt, je naar de laatste film gaat
             currentimg = 6;
         }
 
         beweeg2();
     } //end function links()
-    if (event.keyCode == 37) {
+    if (event.keyCode == 37) { //zorgt dat de linkerpijltoets werkt
         links();
-    } else if (event.keyCode == 39) {
+    } else if (event.keyCode == 39) { //zorgt dat de rechterpijltoets werkt
         rechts();
     }
 });
