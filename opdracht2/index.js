@@ -138,3 +138,32 @@ function pijlen(event) {
 
 pijl1.addEventListener("keydown", pijlen);
 pijl2.addEventListener("keydown", pijlen);
+
+document.addEventListener("keydown", function () {
+    function rechts() {
+        currentimg = currentimg + 1;
+        console.log(currentimg);
+
+        if (currentimg > 8) {
+            currentimg = 1;
+        }
+
+        beweeg();
+    }
+
+    function links() {
+        currentimg = currentimg - 1;
+        console.log(currentimg);
+
+        if (currentimg < 1) {
+            currentimg = 8;
+        }
+
+        beweeg2();
+    } //end function links()
+    if (event.keyCode == 37) {
+        links();
+    } else if (event.keyCode == 39) {
+        rechts();
+    }
+});
