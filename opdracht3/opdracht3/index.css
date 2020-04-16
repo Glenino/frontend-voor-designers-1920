@@ -1,0 +1,165 @@
+/* || general styles */
+
+img {
+    width: 7.5em;
+    height: 12.5em;
+    background-color: white;
+    border: 1em solid;
+    border-color: white;
+    margin-top: 3em;
+    margin-left: 5em;
+}
+
+html {
+    background: url("img/Blue-movie-film-strip-backgrounds.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+}
+
+.normal {
+    color: white;
+    width: 25em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+        opacity: 1;
+    background-color:none;
+
+}
+
+h1 {
+    text-shadow: 1px 1px 1px red,
+        2px 2px 1px orange,
+        3px 3px 1px yellow,
+        4px 4px 1px green,
+        5px 5px 1px lightblue,
+        6px 6px 1px purple,
+        7px 7px 1px pink;
+    text-align: center;
+    background-size: 2em;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    border-color: greenyellow;
+    transform: scale(1.1, 1.1);
+}
+
+.dropzone {
+    width: 25em;
+    background: url("img/star.jpg");
+    margin-right: auto;
+    border: 0.1em solid;
+    border-color: yellow;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding: 0.1em;
+}
+
+div > img {
+    width: 2.5em;
+    height: 4.5em;
+    background-color: white;
+    border: 0.3em solid;
+    border-color: white;
+    margin-top: 0.9em;
+    margin-left: 0.5em;
+}
+
+div:hover {
+    border-color: greenyellow;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 5em;
+    margin-right: auto;
+    border: 0.3em;
+}
+
+.pijlr {
+    width: 3.5em;
+    height: 3.5em;
+    border: 0em;
+    margin-right: 15em;
+    margin-top: 2em;
+}
+
+.pijll {
+    width: 3.5em;
+    height: 3.5em;
+    border: 0em;
+    margin-left: 15em;
+    margin-top: 2em;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pijll:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.pijlr:hover {
+    border-color: greenyellow;
+    transform: scale(1.2, 1.2);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.mini {
+    width: 5em;
+    height: 8.3em;
+    background-color: white;
+    border: 0.3em solid;
+    border-color: white;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: 120%;
+}
+
+section > img {
+    margin-left: 635px;
+}
+
+.superm {
+    /*    margin-left: -3000px;*/
+    transition: margin-left 1s;
+}
+
+.mario {
+    margin-left: 0em;
+}
+
+.luigi {
+    margin-left: -50em;
+}
+
+.peach {
+    margin-left: -99em;
+}
+
+.daisy {
+    margin-left: -148.3em;
+}
+
+.wario {
+    margin-left: -197.5em;
+}
+
+.waluigi {
+    margin-left: -246.6em;
+}
